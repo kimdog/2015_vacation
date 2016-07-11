@@ -1,0 +1,17 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies" : {
+    "express" : "*",
+    "grunt" : "*",
+    "ejs" : "*",
+    "body-parser" : "*",
+    "cookie-parser" : "*",
+    "express-session" : "*",
+    "connect-busboy" : "*",
+    "mysql" : "*",
+    "generic-pool" : "*",
+    "socket.io" : "*",
+    "async" : "*"
+  }
+}

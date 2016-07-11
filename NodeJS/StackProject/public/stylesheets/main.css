@@ -1,0 +1,44 @@
+header{
+    text-align: center;
+    margin-top: 40px;
+}
+
+#stack-logo{
+    position:relative;
+    font-size: 40px;
+    margin-left:40px;
+}
+
+#stack-logo-stack{
+    float:right;
+    max-width: 40px;
+    margin-right:40px;
+}
+
+.signin{
+    color:red;
+}
+
+.form-group{
+    margin-left:40px;
+    margin-right: 40px;
+}
+
+.form-group #buttons{
+    position: static;
+    max-width: 200px;
+}
+
+nav{
+    margin-top:30px;
+}
+
+section{
+    height: 100px;
+}
+
+footer{
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+}

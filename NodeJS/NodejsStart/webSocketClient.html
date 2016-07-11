@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>      <!-- jquery 다운 -->
+    <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>    <!-- socket.io 다운 -->
+    <script>
+        var socket;
+        function connectServer() {
+            // WebSocket 서버에 접속
+            // 필요한 Library 포함
+            // 화면제어 : jQuery Library
+            // WebSocket protocol을 이용하기 위한 : socket.io
+            // 1. WebSocket server에 접속
+            // 성공하지 못하면 다시 시도 -> "force new connection" : true
+            socket = io.connect("http://localhost:5000",{
+                "force new connection" : true
+            });
+            socket.on("ServerEcho",function(data){
+                var content = $("#chat").val();
+                var newContent = content + "\n" + data.msg;
+                $("#chat").val(newContent);
+            });
+
+
+            /*
+            // 2. 만약 접속에 성공하면 socket객체가 튕겨 나와요!
+            socket.on("ConnectMSG",function(data) {
+                // 이벤트가 발생되면 잡아요! 서버로부터 전달받은
+                // 객체가 callback 함수내에 인자로 들어와요
+                // 인자 받아서 화면저리!!
+                $("#myDiv").text(data.msg);
+            });*/
+
+        }
+        function disconnectServer() {
+            socket.disconnect();
+        }
+        function sendMSG() {
+            // Enter = 13
+            if(event.keyCode == 13) {
+                // 채팅문자열을 서버로 전송
+                socket.emit("sendChatMSG", {
+                   msg : $("#myText").val()
+                });
+                $("#myText").val("");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="서버접속"
+            onclick="connectServer()">
+    <input type="button" value="접속종료"
+            onclick="disconnectServer()"><br><br>
+    <textarea id="chat" rows="10" cols="30" readonly></textarea>
+    <br><br>
+    <input type="text" id="myText" onkeyup="sendMSG()">
+</body>
+</html>

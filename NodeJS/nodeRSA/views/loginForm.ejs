@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> <!-- network을 통해서 jquery라이브러리 다운받아사용-->
+    <script src="/js/jsencrypt.min.js"></script>
+    <script src="/js/index.js"></script>       <!-- static폴더로 지정한 public아래 경로에서 sendData()함수 사용하기위해-->
+</head>
+<body>
+    <form action="loginProcess" method="post"> <!-- form 태그를 이용할 때는 거의 예외없이 get대신 post 이용-->
+        ID : <input type="text" id="uId" name="uId"><br>
+        Pw : <input type="text" id="uPw" name="uPw"><br>
+        <input type="hidden" id="pkey"
+               value="<%= publicKey%>">
+        <input type="button" value="로그인을 해요!!"
+                onclick="sendData()">          <!-- submit은 로직처리를 할 수가 없다 따라서 button -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    파일 업로드 에요 ! <br><br>
+    <form action="http://localhost:5000/fileUpload"
+            method="post"
+            enctype="multipart/form-data">       <!-- 파일 업로드는 무조건 포스트 방식으로, encoding type-->
+        파일 선택 : <input type="file" name="fileName">
+        <input type="submit" value="파일 업로드">
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "Library-application",
+  "version": "0.0.1",
+  "dependencies": {
+      "express" : "*",
+      "ejs" : "*",
+      "body-parser" : "*",
+      "mysql" : "*",
+      "generic-pool" : "*",
+      "express-session" : "*"
+  }
+}

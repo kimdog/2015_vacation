@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/stylesheets/main.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+
+<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STACK</title>
+<header>
+    <div id="stack-logo">STACK<img src="etc/stack.png" class="img-responsive" id="stack-logo-stack" alt="STACK_LOGO"></div>
+</header>
+<nav>
+    <div class="signup">
+
+        <form action="http://1.229.122.47:5020/register"
+              method="post">
+            <div class="form-group">
+                <label for="usrid">ID:</label>
+                <input type="text" class="form-control" name="usrid">
+            </div>
+            <div class="form-group">
+                <label for="usrpw">Password:</label>
+                <input type="password" class="form-control" name="usrpw">
+            </div>
+            <div class="form-group">
+                <label for="usrname">Name:</label>
+                <input type="text" class="form-control" name="usrname">
+            </div>
+            <div class="form-group">
+                <label for="usrphone">PhoneNumber:</label>
+                <input type="text" class="form-control" name="usrphone">
+            </div>
+
+            <div class="form-group">
+                <input type="button" class="btn btn-default" value="Cancel" id="cancel_bt" onclick="javascript:goToURL('/')">
+                <input type="submit" class="btn btn-warning" value="Sign in" id="sign up_bt">
+                <script type="text/javascript">
+                    function goToURL(url){
+                        location.href = url;
+                    }
+                </script>
+            </div>
+        </form>
+    </div>
+</nav>
+<section>
+</section>
+<footer>
+    <div>Copyright 2015- ,by STACK Team (Korea Univ. 2015 fall Information Security class.) All Rights Reserved.</div>
+
+</footer>
+</html>

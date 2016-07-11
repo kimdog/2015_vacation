@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/stylesheets/main.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STACK</title>
+<header>
+    <div id="stack-logo">STACK<img src="etc/stack.png" class="img-responsive" id="stack-logo-stack" alt="STACK_LOGO"></div>
+</header>
+<nav>
+    <div class="signin">
+        <div class="form-group">
+            <label for="usrid">ID:</label>
+            <%= rsid %>
+        </div>
+        <div class="form-group">
+            <label for="usrpw">Password:</label>
+            <%= rspw %>
+        </div>
+        <div class="form-group">
+            <label for="usrpw">Name:</label>
+            <%= rsname %>
+        </div>
+        <div class="form-group">
+            <label for="usrpw">phonenum:</label>
+            <%= rsphoneNum %>
+        </div>
+
+        <div class="form-group">
+            <input type="button" class="btn btn-default" value="Logout" id="sin_bt" onclick="javascript:goToURL('/')">
+
+            <script type="text/javascript">
+                function goToURL(url){
+                    location.href = url;
+                }
+            </script>
+        </div>
+    </div>
+</nav>
+<section>
+</section>
+<footer>
+    <div>Copyright 2015- ,by STACK Team (Korea Univ. 2015 fall Information Security class.) All Rights Reserved.</div>
+
+</footer>
+</html>
